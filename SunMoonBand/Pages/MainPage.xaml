@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="SunMoonBand.Pages.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="add tile" IsEnabled="{Binding CanAddTile}" Click="AddTile"/>
+                <AppBarButton Label="remove tile" IsEnabled="{Binding CanRemoveTile}" Click="RemoveTile"/>
+                <AppBarToggleButton Label="{Binding SiteDescription}" IsChecked="{Binding UseAlternateSource, Mode=TwoWay}" Icon="Accept"/>
+                <AppBarButton Label="about" Click="AboutClicked" />
+            </CommandBar.SecondaryCommands>
+            <AppBarButton Icon="Sync" Label="sync" IsEnabled="{Binding CanSync}" Click="SyncClicked"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="SUNMOON BAND" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="observation" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="19,10,19,0">
+            <ProgressBar Margin="0,-15,0,0"  IsIndeterminate="True" Visibility="{Binding SyncVisibility}" Foreground="White" VerticalAlignment="Top"/>
+            <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding Observations}" Margin="0,10" Background="#FF552D91" BorderBrush="#FF552D91" Foreground="White" ItemContainerStyle="{StaticResource BandListContainerStyle}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,4,0,4" HorizontalAlignment="Stretch" >
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="{Binding Title}" Style="{ThemeResource TitleTextBlockStyle}" Foreground="White" />
+                                <TextBlock Text="|" Margin="5,0,5,0" Style="{ThemeResource TitleTextBlockStyle}" Foreground="DarkGray" />
+                                <TextBlock Text="{Binding SecondaryTitle}" Style="{ThemeResource TitleTextBlockStyle}" Foreground="DarkGray" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="46" Height="46" Margin="5,5,5,0" Source="{Binding IconSource}" CacheMode="BitmapCache" />
+                                <TextBlock Text="{Binding Content}" Margin="10,0,0,0" Style="{ThemeResource TitleTextBlockStyle}" Foreground="White" FontSize="36" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Grid>
+
+</Page>

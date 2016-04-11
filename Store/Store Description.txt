@@ -1,0 +1,7 @@
+Get daily sun and moon data for your location sent to your Microsoft Band. The custom band tile displays sunrise, sunset, moonrise, moonset and current moon phase as well as illumination percentage. All data provided by the US Naval Observatory.
+
+Version 1.1.0.0
+- Initial release.
+- Automatic refresh when the band connects to the phone. Great for having the latest info when you wake up and take your band out of sleep mode.
+- Detects time zone changes and will perform an automatic refresh.
+- Hourly data updates occur automatically, and will be based on your current city location.
