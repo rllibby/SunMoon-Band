@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="3545RussellLibby.SunMoonBand" Publisher="CN=F83A8F8E-6A62-4E8D-94EC-F90DC76FEAFA" Version="1.5.0.0" />
+  <Identity Name="3545RussellLibby.SunMoonBand" Publisher="CN=F83A8F8E-6A62-4E8D-94EC-F90DC76FEAFA" Version="1.6.0.0" />
   <mp:PhoneIdentity PhoneProductId="4263a22c-8bd8-46bd-aeda-c7c4db7b564c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>SunMoon Band</DisplayName>

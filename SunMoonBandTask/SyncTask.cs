@@ -71,7 +71,7 @@ namespace SunMoonBandTask
                         if (observations.Count == 0) throw new Exception("Failed to download observations.");
                         if (isCancelled) return;
 
-                        var pairedBands = await BandClientManager.Instance.GetBandsAsync();
+                        var pairedBands = await BandClientManager.Instance.GetBandsAsync(true);
 
                         taskInstance.Progress = 40;
                         if ((pairedBands.Length < 1) || isCancelled) return;

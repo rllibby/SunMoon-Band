@@ -26,7 +26,7 @@ namespace SunMoonBandCommon
         /// </summary>
         public static string Version
         {
-            get { return "1.5.0.0"; }
+            get { return "1.6.0.0"; }
         }
 
         /// <summary>
