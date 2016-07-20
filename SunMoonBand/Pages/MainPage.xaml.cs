@@ -382,7 +382,7 @@ namespace SunMoonBand.Pages
 
             var panel = new FlowPanel(updatedBlock)
             {
-                Rect = new PageRect(15, 5, 230, 80)
+                Rect = new PageRect(15, 0, 230, 106)
             };
 
             return new PageLayout(panel);
