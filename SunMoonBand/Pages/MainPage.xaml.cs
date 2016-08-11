@@ -319,7 +319,7 @@ namespace SunMoonBand.Pages
 
             var secondaryTitleBlock = new TextBlock
             {
-                ColorSource = ElementColorSource.BandSecondaryText,
+                Color = new BandColor(0x7c, 0x7c, 0x7c),
                 ElementId = Common.SeondaryTitleId,
                 Rect = new PageRect(0, 0, 0, 35),
                 AutoWidth = true,
@@ -336,8 +336,8 @@ namespace SunMoonBand.Pages
             var iconBlock = new Icon
             {
                 ElementId = Common.IconId,
-                Rect = new PageRect(0, 0, 46, 46),
-                Margins = new Margins(0, 5, 10, 0),
+                Rect = new PageRect(0, 0, 48, 48),
+                Margins = new Margins(0, 25, 10, 0),
                 Color = new BandColor(0xff, 0xff, 0xff),
             };
 
@@ -346,21 +346,21 @@ namespace SunMoonBand.Pages
                 Color = new BandColor(0xff, 0xff, 0xff),
                 Font = TextBlockFont.ExtraLargeNumbers,
                 ElementId = Common.ContentId,
-                Rect = new PageRect(0, 0, 0, 66),
+                Rect = new PageRect(0, 0, 0, 78),
                 AutoWidth = true,
-                Baseline = 91,
+                Baseline = 113,
                 BaselineAlignment = TextBlockBaselineAlignment.Absolute
             };
 
             var bottomFlowPanel = new FlowPanel(iconBlock, contentBlock)
             {
-               Rect = new PageRect(0, 0, 230, 66),
+               Rect = new PageRect(0, 0, 230, 78),
                Orientation = FlowPanelOrientation.Horizontal
             };
 
             var panel = new FlowPanel(topFlowPanel, bottomFlowPanel)
             {
-                Rect = new PageRect(15, 0, 230, 106)
+                Rect = new PageRect(15, 0, 230, 113)
             };
 
             return new PageLayout(panel);
@@ -377,12 +377,12 @@ namespace SunMoonBand.Pages
                 ColorSource = ElementColorSource.BandSecondaryText,
                 ElementId = Common.UpdateId,
                 AutoHeight = true,
-                Rect = new PageRect(0, 10, 200, 0),
+                Rect = new PageRect(0, 10, 230, 0),
             };
 
             var panel = new FlowPanel(updatedBlock)
             {
-                Rect = new PageRect(15, 0, 230, 106)
+                Rect = new PageRect(15, 0, 230, 113)
             };
 
             return new PageLayout(panel);
